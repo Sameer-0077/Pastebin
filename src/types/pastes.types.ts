@@ -3,5 +3,5 @@ export interface Paste {
   content: string;
   created_at: number;
   expires_at: number | null;
-  remaining_views: number | null;
+  max_views: number | null;
 }
