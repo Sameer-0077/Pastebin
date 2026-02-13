@@ -2,7 +2,7 @@ import { Router, Request, Response } from "express";
 
 const router = Router();
 
-router.get("/healtz", (req: Request, res: Response) => {
+router.get("/healtz", (req: Request, res: Response): Response => {
   try {
     return res.status(200).json({ ok: true });
   } catch (error) {
