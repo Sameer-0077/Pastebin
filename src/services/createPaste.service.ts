@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import { Paste } from "../types/pastes.types";
 
-const pastes = new Map<string, Paste>();
+// const pastes = new Map<string, Paste>();
 export const createPaste = (
   content: string,
   ttl_seconds?: number,
@@ -18,8 +18,9 @@ export const createPaste = (
     created_at: now,
     expires_at: ttl_seconds ? now + ttl_seconds * 1000 : null,
     max_views: max_views ?? null,
+    views: 0,
   };
 
-  pastes.set(id, paste);
+  // pastes.set(id, paste);
   return paste;
 };
